@@ -9,8 +9,8 @@
 /*.rdb
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+log/*
+tmp/*
 !/log/.keep
 !/tmp/.keep
 
@@ -44,8 +44,6 @@ config/database.yml
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-
-log/*
 
 .idea/*
 
