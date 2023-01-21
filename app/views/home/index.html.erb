@@ -1,0 +1,27 @@
+<%= link_to "Get Jokes", get_joke_path, :method => :get%>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% ["casa", "carro" ].each do |book| %>
+      <tr>
+        <td><%= book %></td>
+        <td><%= "COMO VAS" %></td>
+        <td><%= link_to "Show", book %></td>
+        <td><%= link_to "Destroy", book, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
