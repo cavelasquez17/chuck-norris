@@ -1,0 +1,10 @@
+<a href="/">Home</a>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<br><br><br><br>
+
+<h1>Chuck Norris Joke :)<h1>
+<%= button_to "Refresh Joke", new_user_joke_path(current_user), :method => :get%>
+<p><%=@joke.content %></p>
+
+<%= button_to "Favorite", user_jokes_path(content: @joke.content), { controller: "jokes", action: "create", method: :post } %>
+
