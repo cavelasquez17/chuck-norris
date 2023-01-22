@@ -74,3 +74,4 @@ gem 'byebug'
 
 # https://rubygems.org/gems/devise
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'dotenv-rails', groups: [:development, :test]

@@ -1,0 +1,24 @@
+<a href="/">Home</a>
+
+<h1>My Jokes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jokes.each do |joke| %>
+      <tr>
+        <td><%= joke['id'] %></td>
+        <td><%= joke['content'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
